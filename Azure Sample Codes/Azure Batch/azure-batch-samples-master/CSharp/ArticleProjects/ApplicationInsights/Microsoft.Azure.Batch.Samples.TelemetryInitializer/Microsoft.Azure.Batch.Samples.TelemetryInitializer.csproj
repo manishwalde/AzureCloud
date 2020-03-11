@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net462</TargetFramework>
+    <RootNamespace>Microsoft.Azure.Batch.Samples.TelemetryInitializer</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.ApplicationInsights.WindowsServer" Version="2.3.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>

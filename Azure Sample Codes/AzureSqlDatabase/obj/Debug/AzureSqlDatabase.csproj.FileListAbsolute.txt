@@ -1,0 +1,7 @@
+D:\ManishW\Azure\Sample Code\AzureSqlDatabase\bin\Debug\AzureSqlDatabase.exe.config
+D:\ManishW\Azure\Sample Code\AzureSqlDatabase\bin\Debug\AzureSqlDatabase.exe
+D:\ManishW\Azure\Sample Code\AzureSqlDatabase\bin\Debug\AzureSqlDatabase.pdb
+D:\ManishW\Azure\Sample Code\AzureSqlDatabase\obj\Debug\AzureSqlDatabase.csprojAssemblyReference.cache
+D:\ManishW\Azure\Sample Code\AzureSqlDatabase\obj\Debug\AzureSqlDatabase.csproj.CoreCompileInputs.cache
+D:\ManishW\Azure\Sample Code\AzureSqlDatabase\obj\Debug\AzureSqlDatabase.exe
+D:\ManishW\Azure\Sample Code\AzureSqlDatabase\obj\Debug\AzureSqlDatabase.pdb

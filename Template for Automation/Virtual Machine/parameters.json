@@ -1,0 +1,92 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "location": {
+            "value": "centralus"
+        },
+        "networkInterfaceName": {
+            "value": "azmmwvm3875"
+        },
+        "networkSecurityGroupName": {
+            "value": "azmmwvm3-nsg"
+        },
+        "networkSecurityGroupRules": {
+            "value": [
+                {
+                    "name": "RDP",
+                    "properties": {
+                        "priority": 300,
+                        "protocol": "TCP",
+                        "access": "Allow",
+                        "direction": "Inbound",
+                        "sourceAddressPrefix": "*",
+                        "sourcePortRange": "*",
+                        "destinationAddressPrefix": "*",
+                        "destinationPortRange": "3389"
+                    }
+                }
+            ]
+        },
+        "subnetName": {
+            "value": "default"
+        },
+        "virtualNetworkName": {
+            "value": "az203VM-vnet"
+        },
+        "addressPrefixes": {
+            "value": [
+                "10.0.0.0/24"
+            ]
+        },
+        "subnets": {
+            "value": [
+                {
+                    "name": "default",
+                    "properties": {
+                        "addressPrefix": "10.0.0.0/24"
+                    }
+                }
+            ]
+        },
+        "publicIpAddressName": {
+            "value": "azmmwvm3-ip"
+        },
+        "publicIpAddressType": {
+            "value": "Dynamic"
+        },
+        "publicIpAddressSku": {
+            "value": "Basic"
+        },
+        "virtualMachineName": {
+            "value": "azmmwvm3"
+        },
+        "virtualMachineRG": {
+            "value": "az203VM"
+        },
+        "osDiskType": {
+            "value": "Premium_LRS"
+        },
+        "virtualMachineSize": {
+            "value": "Standard_B1ms"
+        },
+        "adminUsername": {
+            "value": "az203testuser"
+        },
+        "adminPassword": {
+            "value": null
+        },
+        "diagnosticsStorageAccountName": {
+            "value": "az203vmdiag401"
+        },
+        "diagnosticsStorageAccountId": {
+            "value": "Microsoft.Storage/storageAccounts/az203vmdiag401"
+        },
+        "diagnosticsStorageAccountType": {
+            "value": "Standard_LRS"
+        },
+        "diagnosticsStorageAccountKind": {
+            "value": "Storage"
+        }
+    }
+}

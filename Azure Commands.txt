@@ -1,0 +1,54 @@
+Lecture 34, 35, 38 is incomplete
+------------------------------------------------------------------
+
+$keyVault = Get-AzKeyVault -VaultName "azmmwkeyvault" -ResourceGroupName $rgName;
+$diskEncryptionKeyVaultUrl = $keyVault.VaultUri;
+$keyVaultResourceId = $keyVault.ResourceId;
+$keyEncryptionKeyUrl = (Get-AzKeyVaultKey -VaultName "azmmwkeyvault" -Name myKey).Key.kid;
+
+Set-AzVMDiskEncryptionExtension -ResourceGroupName $rgName `
+    -VMName "myVM" `
+    -DiskEncryptionKeyVaultUrl $diskEncryptionKeyVaultUrl `
+    -DiskEncryptionKeyVaultId $keyVaultResourceId `
+    -KeyEncryptionKeyUrl $keyEncryptionKeyUrl `
+    -KeyEncryptionKeyVaultId $keyVaultResourceId
+	
+	
+	Set-AzVMDiskEncryptionExtension -ResourceGroupName $rgName `
+    -VMName "azmmwvmkey" `
+    -DiskEncryptionKeyVaultUrl $diskEncryptionKeyVaultUrl `
+    -DiskEncryptionKeyVaultId $keyVaultResourceId `
+    -KeyEncryptionKeyUrl $keyEncryptionKeyUrl `
+    -KeyEncryptionKeyVaultId $keyVaultResourceId
+	
+	
+	
+== Deploy AKS Cluster - Connecting Kubernetes in Azure
+az aks get-credentials --resource-group az203VM --name azmmwnewcluster
+kubectl get nodes
+vi azure-vote.yaml
+dir
+kubectl apply -f azure-vote.yaml
+kubectl get nodes
+kubctl get service
+
+
+== Browse AKS Dashboard - Install and run Kubernetes in local
+az aks install-cli
+az aks get-credentials --resource-group mmwkuberesource --name mmwkubernetescluster1
+az aks browse --resource-group mmwkuberesource --name mmwkubernetescluster1
+
+== Docker Compose Up
+docker-compose up -d
+docker container ls
+docker compose down
+
+docker pull <imagename>
+docker-machine ip Default
+
+== Pusing container to azure container registry 
+docker images
+docker tag <azure-app-name> <azure-server-name>/<azure-app-name>:v1  --v1 is tag
+docker ps
+docker push <azure-server-name>/<azure-app-name>
+

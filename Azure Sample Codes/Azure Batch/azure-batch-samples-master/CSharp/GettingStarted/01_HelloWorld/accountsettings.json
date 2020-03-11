@@ -1,0 +1,8 @@
+﻿{
+  "batchAccountName": "azmmwbatch",
+  "batchAccountKey": "/9DiCrxFJeEsCrW/faFjHIYILgpYRhztlp0nrobc3mcHr6jxsmfN9QCGJk7vj44Yih3TFBsYL+2ISXNRcf4KjA==",
+  "batchServiceUrl": "https://azmmwbatch.centralindia.batch.azure.com",
+  "storageAccountName": "azmmwbatchstorage",
+  "storageAccountKey": "VOtKthdVpQKJWOvol8h3Kc591ipo21FZKajjADhGczzaILUATrP6EtAPWhLfIjry5IXgBaLgcxA+tVSdxN2Fyw==",
+  "storageServiceUrl": "core.windows.net"
+}

@@ -1,0 +1,82 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "name": {
+            "value": "azmmwkeyvault"
+        },
+        "location": {
+            "value": "centralus"
+        },
+        "sku": {
+            "value": "Standard"
+        },
+        "accessPolicies": {
+            "value": [
+                {
+                    "objectId": "6e004732-bf29-44ab-b06c-04f24c182280",
+                    "tenantId": "ecdfd9bc-fcca-4f4a-96b1-fe73d7601a1f",
+                    "permissions": {
+                        "keys": [
+                            "Get",
+                            "List",
+                            "Update",
+                            "Create",
+                            "Import",
+                            "Delete",
+                            "Recover",
+                            "Backup",
+                            "Restore"
+                        ],
+                        "secrets": [
+                            "Get",
+                            "List",
+                            "Set",
+                            "Delete",
+                            "Recover",
+                            "Backup",
+                            "Restore"
+                        ],
+                        "certificates": [
+                            "Get",
+                            "List",
+                            "Update",
+                            "Create",
+                            "Import",
+                            "Delete",
+                            "Recover",
+                            "Backup",
+                            "Restore",
+                            "ManageContacts",
+                            "ManageIssuers",
+                            "GetIssuers",
+                            "ListIssuers",
+                            "SetIssuers",
+                            "DeleteIssuers"
+                        ]
+                    }
+                }
+            ]
+        },
+        "tenant": {
+            "value": "ecdfd9bc-fcca-4f4a-96b1-fe73d7601a1f"
+        },
+        "enabledForDeployment": {
+            "value": true
+        },
+        "enabledForTemplateDeployment": {
+            "value": true
+        },
+        "enabledForDiskEncryption": {
+            "value": true
+        },
+        "networkAcls": {
+            "value": {
+                "defaultAction": "Allow",
+                "bypass": "AzureServices",
+                "ipRules": [],
+                "virtualNetworkRules": []
+            }
+        }
+    }
+}

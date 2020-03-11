@@ -1,0 +1,8 @@
+﻿{
+  "batchAccountName": "mmwbatchaccount",
+  "batchAccountKey": "MaQOgmI5M4/lSia4ETh8u3vd+PUzboSr0Cgiiwm3t1lmCe6OSgIYoN3nuy5w/ULNGakJxG8KmWFbORbhOJR9pg==",
+  "batchServiceUrl": "https://mmwbatchaccount.eastus.batch.azure.com",
+  "storageAccountName": "mmwbatchaccountstorage",
+  "storageAccountKey": "exONikrlw00fUmqWPgYlYPGmDWMysH1lHTdLeF2d9eyZ/grTH4bwDImRkVLGH6Yg/Kx/tVgPVfFWFQ/S0nt/Jw==",
+  "storageServiceUrl": "core.windows.net"
+}

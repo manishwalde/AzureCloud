@@ -1,0 +1,38 @@
+language: python
+cache: pip
+python:
+  - 2.7
+  - 3.4
+  - 3.5
+  # disable pypy until travis upgrades to at least pypy2.6 due to cryptography
+  #- pypy
+  # disable pypy3 until 3.3 compliance
+  #- pypy3
+addons:
+  apt:
+    config:
+      retries: true
+    update: true  
+    packages:
+      - oracle-java8-installer
+env:
+  - BATCH_SAMPLES_DIR=Python/Batch
+install:
+  - python -m pip install --upgrade pip
+  - pip install --upgrade setuptools
+  - pip install -r $BATCH_SAMPLES_DIR/requirements.txt
+  - pip install coveralls flake8 pytest pytest-cov requests_mock
+  # install Java stuff
+  - export PATH="/usr/lib/jvm/java-8-oracle:$PATH"
+  - export JAVA_HOME="/usr/lib/jvm/java-8-oracle"
+  - mkdir mvn
+  - wget "http://www-us.apache.org/dist/maven/maven-3/3.5.4/binaries/apache-maven-3.5.4-bin.tar.gz"
+  - tar -zxvf apache-maven-3.5.4-bin.tar.gz -C ./mvn
+  - export PATH=`pwd`/mvn/bin:$PATH
+  - mvn -v
+script:
+  - cd Java
+  - mvn install
+  - cd ../$BATCH_SAMPLES_DIR
+  - flake8 . --statistics
+

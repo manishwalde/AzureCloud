@@ -1,0 +1,52 @@
+docker version   
+docker -v
+docker info 
+docker run --help
+docker images
+docker images -q
+docker images -a
+docker login
+git clone https://github.com/docker/doodle.git
+cd doodle\cheers2019
+docker build -t mwalde/cheers2019 .
+
+
+docker run <ImageName>
+docker run -it --rm mwalde/cheers2019
+docker run --name MyUbuntu -it ubuntu bash
+
+== Gives running container
+docker ps 
+== Gives running container
+docker ps -a 
+
+docker inspect <ImageName | Id>
+
+== To create contaier in stoped state
+docker contaier create
+
+docker start <ContainerId | ContainerName>
+docker stop <ContainerId | ContainerName>
+
+docker pause <ContainerId | ContainerName>
+docker unpause <ContainerId | ContainerName>
+
+docker top <ContainerId | ContainerName>
+docker stats <ContainerId | ContainerName>
+
+docker attach <ContainerId | ContainerName>
+docker kill <ContainerId | ContainerName>
+docker rm <ContainerId | ContainerName>
+docker container rm <ContainerId | ContainerName>
+
+==This will remove all stopped containers.
+docker container prune
+
+docker rmi -f <ImageID/ImageName>
+
+docker history <ImageName | Id>
+docker push mwalde/cheers2019
+
+docker pull <ImageName:tag>
+
+7575958285
